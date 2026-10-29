@@ -35,10 +35,11 @@ aura-creative-studio/
 
 No requiere frameworks ni compiladores complejos.
 
-### Opción A: Abrir directamente
+### Opción A: Abrir directamente (Offline / Local)
 Basta con abrir `index.html` en cualquier navegador moderno (Chrome, Firefox, Safari, Edge).
+- *Nota sobre entornos locales*: El proyecto incluye un dataset embebido de respaldo y manejo seguro de almacenamiento local. Si el navegador restringe `fetch()` o `localStorage` bajo el protocolo `file://`, la aplicación conmuta automáticamente al catálogo embebido sin emitir excepciones que interrumpan la interfaz.
 
-### Opción B: Con servidor local (recomendado para desarrollo)
+### Opción B: Con servidor local (Recomendado para simular producción)
 Utilizando Node.js (ya disponible en el entorno):
 ```bash
 npx serve aura-creative-studio
@@ -76,18 +77,34 @@ Luego abrir: `http://localhost:8000` (o el puerto indicado).
    ```
 3. La web detectará y renderizará automáticamente la nueva tarjeta y su caso de estudio en el modal interactivo.
 
-### Cómo configurar el correo de contacto definitivo
-1. Abrir `script.js` y localizar el objeto `appState.contactConfig`:
-   ```javascript
-   contactConfig: {
-     isConfigured: true,
-     userEmail: "contacto@aura-creative.studio" // Colocar aquí el correo real
-   }
-   ```
-2. En `index.html`, actualizar el enlace `mailto:` del botón en la sección `#contact`:
-   ```html
-   <a href="mailto:contacto@aura-creative.studio" class="btn btn-accent" ...>
-   ```
+### Configuración del canal de contacto (Estado: Pendiente)
+El estado inicial del canal de contacto está configurado como **pendiente** para evitar el uso de correos ficticios o no autorizados.
+
+- **Comportamiento activo actual en `script.js`**:
+  ```javascript
+  contactConfig: {
+    isConfigured: false, // En false por defecto: bloquea envíos a buzones no confirmados
+    userEmail: null      // En null: no existe dirección corporativa cargada
+  }
+  ```
+- **Interacción del usuario mientras está pendiente**: Al presionar el botón "Enviar un Correo" (`[data-contact-btn]`), la web intercepta el evento e informa al visitante mediante un diálogo informativo que el correo profesional está en proceso de validación oficial, evitando abrir clientes de correo con destinos inválidos.
+- **Cómo habilitar la dirección corporativa definitiva cuando esté confirmada**:
+  1. Abrir `script.js` y actualizar las propiedades:
+     ```javascript
+     contactConfig: {
+       isConfigured: true,
+       userEmail: "tu-correo-confirmado@tudominio.com"
+     }
+     ```
+  2. Al pasar `isConfigured` a `true` y asignar `userEmail`, el botón activará automáticamente `mailto:tu-correo-confirmado@tudominio.com`.
+
+### Configuración de Metadatos Sociales (Open Graph y Twitter)
+Los metadatos Open Graph (`og:image`) y Twitter Card (`twitter:image`) en `index.html` utilizan rutas relativas locales para previsualización.
+- Una vez desplegado el sitio y asignado el dominio público definitivo (por ejemplo `https://aura-creative.studio`), reemplace el atributo `content` en las etiquetas correspondientes con la URL absoluta canónica:
+  ```html
+  <meta property="og:image" content="https://<tu-dominio-publico>/public/images/projects/cyber-monday.svg">
+  <meta name="twitter:image" content="https://<tu-dominio-publico>/public/images/projects/cyber-monday.svg">
+  ```
 
 ### Cómo editar los idiomas
 - Todos los textos de la interfaz residen en el diccionario `translations` dentro de `script.js` (`translations.es` y `translations.en`).

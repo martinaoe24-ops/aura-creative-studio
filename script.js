@@ -3,17 +3,34 @@
  * Supports: Bilinguality (ES/EN), Accessible Modals, Portfolio Filtering, Keyboard Nav
  */
 
+// Safe Storage Helper (Handles local file:// or browser storage restrictions)
+function getSavedLanguage() {
+  try {
+    return localStorage.getItem('aura_lang') || 'es';
+  } catch (e) {
+    return 'es';
+  }
+}
+
+function saveLanguage(lang) {
+  try {
+    localStorage.setItem('aura_lang', lang);
+  } catch (e) {
+    // Graceful fallback if localStorage is unavailable
+  }
+}
+
 // Application State
 const appState = {
-  lang: localStorage.getItem('aura_lang') || 'es',
+  lang: getSavedLanguage(),
   projects: [],
   activeFilter: 'all',
   activeProjectModal: null,
+  previousActiveElement: null,
   // Contact email configuration - clearly marked pending
   contactConfig: {
-    isConfigured: false,
-    emailPlaceholder: 'hello@aura-creativestudio.placeholder.com',
-    userEmail: null // Pending user specification
+    isConfigured: false, // Set to true only when a confirmed corporate email is provided
+    userEmail: null      // Set to string "official@aura-creativestudio.com" when available
   }
 };
 
@@ -444,11 +461,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // Setup Contact link and clearly display pending status
 function setupContactConfig() {
   const contactButtons = document.querySelectorAll('[data-contact-btn]');
-  const contactNotice = document.getElementById('contactPendingNotice');
 
   contactButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
-      if (!appState.contactConfig.isConfigured && !appState.contactConfig.userEmail) {
+      if (appState.contactConfig.isConfigured && appState.contactConfig.userEmail) {
+        window.location.href = `mailto:${appState.contactConfig.userEmail}`;
+      } else {
         e.preventDefault();
         const pendingMsg = appState.lang === 'es'
           ? "El canal de correo oficial de AURA Creative Studio se encuentra en configuración pendiente hasta la confirmación de la dirección corporativa definitiva del estudio. Envíe sus requerimientos preliminares a través de los canales directos habilitados."
@@ -476,7 +494,7 @@ function initLanguage() {
 function setLanguage(lang) {
   if (lang !== 'es' && lang !== 'en') return;
   appState.lang = lang;
-  localStorage.setItem('aura_lang', lang);
+  saveLanguage(lang);
   applyLanguage(lang);
   renderProjects();
   if (appState.activeProjectModal) {
@@ -622,6 +640,7 @@ function renderProjects() {
 
 // Modal Case Study Management
 function openProjectModal(project) {
+  appState.previousActiveElement = document.activeElement;
   appState.activeProjectModal = project;
   renderProjectModal(project);
   
@@ -645,6 +664,9 @@ function closeProjectModal() {
     document.body.style.overflow = '';
   }
   appState.activeProjectModal = null;
+  if (appState.previousActiveElement && typeof appState.previousActiveElement.focus === 'function') {
+    appState.previousActiveElement.focus();
+  }
 }
 
 function renderProjectModal(project) {
@@ -732,10 +754,30 @@ function setupModalKeyboardHandling() {
     }
   });
 
-  // Close on Escape key
-  document.addEventListener('keydown', (e) => {
+  // Modal Keyboard Navigation: Escape key and Focus Trap (Tab / Shift+Tab)
+  modal.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('is-open')) {
       closeProjectModal();
+      return;
+    }
+
+    if (e.key === 'Tab' && modal.classList.contains('is-open')) {
+      const focusable = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+      if (focusable.length === 0) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        }
+      } else {
+        if (document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     }
   });
 }
@@ -761,6 +803,16 @@ function setupNavigation() {
         menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="8" x2="20" y2="8"></line><line x1="4" y1="16" x2="20" y2="16"></line></svg>`;
       });
+    });
+
+    // Close mobile nav on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) {
+        mobileNav.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="8" x2="20" y2="8"></line><line x1="4" y1="16" x2="20" y2="16"></line></svg>`;
+        menuToggle.focus();
+      }
     });
   }
 
