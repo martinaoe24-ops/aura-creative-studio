@@ -1,0 +1,277 @@
+[
+  {
+    "id": "cyber-monday",
+    "title": {
+      "es": "Cyber Monday — Tech Edit",
+      "en": "Cyber Monday — Tech Edit"
+    },
+    "category": {
+      "es": "Campaña de Producto",
+      "en": "Product Campaign"
+    },
+    "tagline": {
+      "es": "Campaña visual de alto impacto para retail tecnológico y pantallas 3D.",
+      "en": "High-impact visual campaign for premium consumer tech and 3D billboards."
+    },
+    "thumbnail": "public/images/projects/cyber-monday.svg",
+    "isFictitious": true,
+    "year": "2026",
+    "objective": {
+      "es": "Explorar un lenguaje visual futurista y sofisticado para promociones tecnológicas de temporada alta, alejándose de los clichés de rebajas estridentes hacia un editorial premium.",
+      "en": "Explore a futuristic, sophisticated visual tone for peak-season tech retail, shifting away from aggressive sales tropes into high-end editorial clarity."
+    },
+    "targetAudience": {
+      "es": "Consumidores de tecnología de vanguardia, entusiastas del diseño industrial y compradores de e-commerce de gama alta.",
+      "en": "Early adopters of cutting-edge tech, industrial design enthusiasts, and discerning e-commerce shoppers."
+    },
+    "creativeConcept": {
+      "es": "Geometría lumínica precisa, contrastes profundos y texturas metálicas táctiles que transmiten precisión de ingeniería y exclusividad.",
+      "en": "Precise light architecture, deep obsidian contrasts, and tactile metallic textures evoking engineering precision and exclusivity."
+    },
+    "aiTools": [
+      "Midjourney v6",
+      "ComfyUI (custom workflow)",
+      "Magnific AI Upscale",
+      "Adobe Photoshop (retouch & comp)"
+    ],
+    "deliverables": {
+      "es": [
+        "Key visual master en alta resolución para vía pública",
+        "Animaciones dinámicas en bucle para pantallas digitales OOH",
+        "Banners adaptativos para cabeceras de e-commerce",
+        "Set de creatividades multiformato para performance marketing"
+      ],
+      "en": [
+        "High-res key visual master for digital out-of-home",
+        "Seamless motion loops for 3D outdoor displays",
+        "Adaptive hero banners for e-commerce storefronts",
+        "Multi-ratio creative asset suite for performance marketing"
+      ]
+    },
+    "formats": [
+      "16:9 4K Digital OOH",
+      "9:16 Mobile Stories",
+      "1:1 Feed Ads",
+      "Omnichannel Web Banners"
+    ],
+    "processDescription": {
+      "es": "El proceso comenzó con la definición de un sistema de prompts orientado a iluminación volumétrica controlada y renderizado de materiales hápticos. A través de ComfyUI se estabilizó la coherencia de iluminación y reflejos en diferentes dispositivos conceptuales. Las piezas resultantes pasaron por un pipeline de corrección cromática manual, retoque tipográfico y escalado de ultra alta definición.",
+      "en": "The workflow began with custom prompt engineering calibrated for controlled volumetric lighting and tactile material rendering. ComfyUI was employed to enforce reflection and lighting consistency across conceptual tech products. Raw generations then underwent manual color correction, editorial typographic styling, and ultra-high-definition upscaling."
+    },
+    "gallery": [
+      {
+        "src": "public/images/projects/cyber-monday.svg",
+        "caption": {
+          "es": "Composición principal — Hero editorial Cyber Monday",
+          "en": "Primary composition — Cyber Monday Editorial Hero"
+        }
+      }
+    ]
+  },
+  {
+    "id": "norden-home",
+    "title": {
+      "es": "NORDEN HOME — Campaña de Temporada",
+      "en": "NORDEN HOME — Seasonal Campaign"
+    },
+    "category": {
+      "es": "Editorial & Espacios",
+      "en": "Editorial & Interiors"
+    },
+    "tagline": {
+      "es": "Atmósferas cálidas y minimalistas para mobiliario nórdico contemporáneo.",
+      "en": "Warm, minimalist atmospheres for contemporary Nordic interior living."
+    },
+    "thumbnail": "public/images/projects/norden-home.svg",
+    "isFictitious": true,
+    "year": "2026",
+    "objective": {
+      "es": "Diseñar una serie de bodegones y espacios residenciales generados sintéticamente que transmitan serenidad, luz natural envolvente y tactilidad orgánica sin requerir sesiones fotográficas en locaciones complejas.",
+      "en": "Craft a suite of synthetically rendered still lifes and residential environments conveying serenity, natural warm light, and organic tactility without extensive on-location photo shoots."
+    },
+    "targetAudience": {
+      "es": "Entusiastas del diseño de interiores contemporáneo, arquitectura residencial y decoración minimalista.",
+      "en": "Enthusiasts of contemporary interior design, residential architecture, and warm minimalism."
+    },
+    "creativeConcept": {
+      "es": "La interacción entre la arquitectura austera de hormigón/arcilla y la suave incidencia de la luz solar natural matutina.",
+      "en": "The delicate dialogue between raw limestone/clay architecture and soft morning sun rays."
+    },
+    "aiTools": [
+      "Midjourney v6.1",
+      "Custom LoRA para texturas de cerámica y lino",
+      "ControlNet Depth",
+      "Lightroom CC"
+    ],
+    "deliverables": {
+      "es": [
+        "Catálogo editorial impreso (lookbook digital de 40 páginas)",
+        "Fotografías de ambiente para fichas de producto de tienda online",
+        "Micro-videos de movimiento de luz para pauta en redes sociales",
+        "Plantillas de diseño para newsletters de marca"
+      ],
+      "en": [
+        "Editorial print lookbook (40-page digital catalog)",
+        "Atmospheric room-set photography for product PDP pages",
+        "Ambient light motion reels for social channels",
+        "Curated brand newsletter layout kit"
+      ]
+    },
+    "formats": [
+      "Lookbook Editorial (A4 Vertical)",
+      "4:5 Instagram Feed",
+      "16:9 Web Fullscreen Hero",
+      "Fichas de producto 1:1"
+    ],
+    "processDescription": {
+      "es": "Se entrenaron adaptadores LoRA ligeros con muestras de cerámica artesanal mate y textiles de lino crudo. Mediante ControlNet se guiaron las composiciones arquitectónicas para preservar proporciones y perspectivas puras. Cada imagen fue afinada en gradación de color para asegurar calidez térmica consistente en toda la serie.",
+      "en": "Custom lightweight LoRA adapters were trained on raw linen textiles and matte ceramic glazes. ControlNet guided the architectural perspective to maintain immaculate proportions. The resulting series was unified in Lightroom with a bespoke warm neutral grading."
+    },
+    "gallery": [
+      {
+        "src": "public/images/projects/norden-home.svg",
+        "caption": {
+          "es": "Bodegón de cerámica escandinava y sombras de ventana natural",
+          "en": "Scandinavian ceramic still life with natural sunlight shadows"
+        }
+      }
+    ]
+  },
+  {
+    "id": "form-objects",
+    "title": {
+      "es": "FORM — Everyday Objects",
+      "en": "FORM — Everyday Objects"
+    },
+    "category": {
+      "es": "Diseño Industrial & Conceptos",
+      "en": "Industrial Design & Concepts"
+    },
+    "tagline": {
+      "es": "Estudio escultórico sobre objetos cotidianos reinterpretados mediante IA.",
+      "en": "Sculptural exploration reinterpreting mundane objects through procedural AI."
+    },
+    "thumbnail": "public/images/projects/form-objects.svg",
+    "isFictitious": true,
+    "year": "2026",
+    "objective": {
+      "es": "Desafiar la percepción estética de los objetos utilitarios habituales convirtiéndolos en piezas escultóricas dignas de galería de arte.",
+      "en": "Challenge the aesthetic perception of functional objects by reimagining them as gallery-worthy sculptural artifacts."
+    },
+    "targetAudience": {
+      "es": "Estudios de diseño, directores de arte, marcas de bienes de consumo premium y comisarios de arte digital.",
+      "en": "Design studios, art directors, luxury consumer goods brands, and digital art curators."
+    },
+    "creativeConcept": {
+      "es": "Tensión material entre lo translúcido (vidrio con cáusticas), lo opaco (piedra basáltica mate) y el pulido reflectante (latón cepillado).",
+      "en": "Material tension between refractive glass, matte basalt stone, and brushed architectural brass."
+    },
+    "aiTools": [
+      "Stable Diffusion XL",
+      "Blender (cámaras de referencia & blocking)",
+      "Photoshop Neural Filters",
+      "Krea AI Real-time"
+    ],
+    "deliverables": {
+      "es": [
+        "Serie de 12 láminas de arte conceptual",
+        "Piezas audiovisuales con rotación espacial en 360 grados",
+        "Kit de texturas y materiales para prototipado 3D",
+        "Monografía digital del estudio"
+      ],
+      "en": [
+        "Series of 12 conceptual fine-art prints",
+        "360-degree spatial turnarounds",
+        "PBR texture and material kits for 3D prototyping",
+        "Digital studio monograph"
+      ]
+    },
+    "formats": [
+      "Print Fine Art (50x70cm 300dpi)",
+      "4K Video Spatial Loops",
+      "Digital Interactive Viewer"
+    ],
+    "processDescription": {
+      "es": "A partir de modelos 3D volumétricos muy simples elaborados en Blender, se proyectó el renderizado generativo utilizando modelos de difusión condicionados. Esto permitió un control riguroso de la silueta y la física de refracción óptica, logrando un realismo tangible que trasciende la generación de imágenes estándar.",
+      "en": "Starting from primitive volumetric 3D block-outs in Blender, diffusion models were conditioned to generate rich material textures and complex caustics. This hybrid method combined total spatial geometry control with the nuanced aesthetic richness of generative neural synthesis."
+    },
+    "gallery": [
+      {
+        "src": "public/images/projects/form-objects.svg",
+        "caption": {
+          "es": "Composición de tensión geométrica en vidrio soplado y piedra negra",
+          "en": "Geometric tension composition in blown glass and black volcanic stone"
+        }
+      }
+    ]
+  },
+  {
+    "id": "social-toolkit",
+    "title": {
+      "es": "Social Campaign Toolkit",
+      "en": "Social Campaign Toolkit"
+    },
+    "category": {
+      "es": "Publicidad & Social",
+      "en": "Advertising & Social"
+    },
+    "tagline": {
+      "es": "Sistema modular de creatividades de alto rendimiento para marcas ágiles.",
+      "en": "Modular high-performance creative system for fast-moving brands."
+    },
+    "thumbnail": "public/images/projects/social-toolkit.svg",
+    "isFictitious": true,
+    "year": "2026",
+    "objective": {
+      "es": "Crear una arquitectura visual modular que permita a las marcas generar decenas de variaciones creativas para pauta publicitaria en cuestión de horas, sin perder coherencia editorial ni calidad artesanal.",
+      "en": "Design a modular visual architecture enabling brands to roll out dozens of paid ad variations within hours, maintaining uncompromising craft and editorial rigor."
+    },
+    "targetAudience": {
+      "es": "Directores de marketing, marcas de venta directa (DTC) y agencias de performance publicitario.",
+      "en": "CMOs, direct-to-consumer (DTC) brands, and high-growth performance media agencies."
+    },
+    "creativeConcept": {
+      "es": "Contraste dinámico entre paletas oscuras de alta legibilidad y toques de verde lima fluorescente con composiciones tipográficas enérgicas.",
+      "en": "Dynamic friction between deep legible dark surfaces and fluorescent acid lime accents with bold kinetic typography."
+    },
+    "aiTools": [
+      "Midjourney v6",
+      "Runway Gen-3 Alpha",
+      "Figma Component Auto-layout",
+      "After Effects Essential Graphics"
+    ],
+    "deliverables": {
+      "es": [
+        "Sistema de diseño en Figma con más de 60 variantes de layout",
+        "Plantillas de video de 6s, 15s y 30s con apertura de alto impacto",
+        "Guía de estilo y manual de generación de prompts para el cliente",
+        "Banco de 100 imágenes sintéticas segmentadas por emoción y producto"
+      ],
+      "en": [
+        "Figma design system featuring 60+ modular layout variants",
+        "Motion templates (6s, 15s, 30s) engineered for high retention",
+        "Brand prompt engineering manual for client creative teams",
+        "Curated bank of 100 synthetic imagery assets categorized by tone"
+      ]
+    },
+    "formats": [
+      "9:16 Instagram Stories & TikTok",
+      "4:5 Meta Feed",
+      "1:1 Carousels",
+      "16:9 YouTube Bumper Ads"
+    ],
+    "processDescription": {
+      "es": "El proyecto resolvió el cuello de botella habitual de la producción publicitaria combinando generación sintética de fondos y objetos con componentes vectoriales y tipográficos pre-ensamblados. Se probaron combinaciones de ratios asegurando que las zonas seguras de las plataformas se respetaran escrupulosamente.",
+      "en": "This project addressed the standard creative production bottleneck by pairing synthetic visual assets with strictly formatted vector typographic frameworks. Multi-ratio safe zones across TikTok, Meta and YouTube were programmatically accounted for."
+    },
+    "gallery": [
+      {
+        "src": "public/images/projects/social-toolkit.svg",
+        "caption": {
+          "es": "Sistema de componentes modulares y visualización multi-ratio",
+          "en": "Modular component framework and multi-ratio ad mockups"
+        }
+      }
+    ]
+  }
+]

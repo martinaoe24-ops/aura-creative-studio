@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <linearGradient id="nordenBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EBE7DF"/>
+      <stop offset="50%" stop-color="#E2DDD2"/>
+      <stop offset="100%" stop-color="#D7D0C3"/>
+    </linearGradient>
+    <linearGradient id="ceramicGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#C5BEB1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#nordenBg)"/>
+
+  <!-- Architectural lines -->
+  <line x1="80" y1="80" x2="1120" y2="80" stroke="#BBB4A5" stroke-width="1"/>
+  <line x1="80" y1="720" x2="1120" y2="720" stroke="#BBB4A5" stroke-width="1"/>
+
+  <!-- Top bar -->
+  <text x="80" y="55" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="4" fill="#69655D">NORDEN HOME / SS-26</text>
+  <text x="1120" y="55" font-family="system-ui, sans-serif" font-size="12" font-weight="600" letter-spacing="2" fill="#8C867C" text-anchor="end">FICTITIOUS CONCEPT</text>
+
+  <!-- Editorial Center Piece: Scandi Ceramics & Natural Sunlight Arch -->
+  <g transform="translate(640, 140)">
+    <!-- Window Cast Shadow / Sunlight -->
+    <path d="M 0 0 L 320 60 L 260 520 L -60 460 Z" fill="#F4EFE6" opacity="0.6"/>
+    <!-- Architectural Arch -->
+    <path d="M 40 480 L 40 220 A 160 160 0 0 1 360 220 L 360 480 Z" fill="none" stroke="#D1C9BA" stroke-width="2"/>
+    <!-- Minimal Vase 1 -->
+    <path d="M 120 480 C 100 420, 80 340, 140 260 C 170 220, 210 220, 240 260 C 300 340, 280 420, 260 480 Z" fill="url(#ceramicGrad)" stroke="#B5ADA0" stroke-width="1"/>
+    <!-- Organic Stem -->
+    <path d="M 190 240 Q 220 120 160 70" fill="none" stroke="#686358" stroke-width="2.5" stroke-linecap="round"/>
+    <ellipse cx="160" cy="70" rx="14" ry="7" fill="#8A8374" transform="rotate(-30 160 70)"/>
+    <ellipse cx="205" cy="140" rx="12" ry="6" fill="#8A8374" transform="rotate(25 205 140)"/>
+  </g>
+
+  <!-- Typography Area -->
+  <g transform="translate(80, 240)">
+    <text x="0" y="70" font-family="'Cinzel', Georgia, serif" font-size="64" font-weight="400" fill="#22221F" letter-spacing="2">NORDEN</text>
+    <text x="0" y="150" font-family="'Cinzel', Georgia, serif" font-size="56" font-style="italic" fill="#58544C">Atmospheres</text>
+    <text x="0" y="210" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" letter-spacing="3" fill="#7A756B">SEASONAL HOME CAMPAIGN</text>
+
+    <text x="0" y="280" font-family="system-ui, sans-serif" font-size="16" line-height="1.6" fill="#4B4842">
+      <tspan x="0" dy="0">Atmospheric editorial exploration for contemporary</tspan>
+      <tspan x="0" dy="28">Nordic interior design, warm natural textures and light.</tspan>
+    </text>
+
+    <g transform="translate(0, 420)">
+      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="11" letter-spacing="3" fill="#8A8478" font-weight="700">FORMAT</text>
+      <text x="0" y="24" font-family="system-ui, sans-serif" font-size="15" fill="#22221F" font-weight="500">Lookbook / Print / E-Commerce Hero</text>
+
+      <text x="340" y="0" font-family="system-ui, sans-serif" font-size="11" letter-spacing="3" fill="#8A8478" font-weight="700">PALETTE</text>
+      <text x="340" y="24" font-family="system-ui, sans-serif" font-size="15" fill="#22221F" font-weight="500">Limestone, Clay &amp; Sand</text>
+    </g>
+  </g>
+</svg>

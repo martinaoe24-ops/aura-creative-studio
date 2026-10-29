@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AURA Creative Studio — Diseño Editorial & Contenido con IA</title>
+  <meta name="description" content="Estudio creativo independiente especializado en campañas visuales, e-commerce y publicidad asistida por IA.">
+  <meta name="keywords" content="AURA, Creative Studio, diseño editorial, inteligencia artificial, campañas publicitarias, dirección de arte, e-commerce">
+  <meta name="author" content="AURA Creative Studio">
+  
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AURA Creative Studio — Diseño Editorial & Contenido con IA">
+  <meta property="og:description" content="Estudio creativo independiente especializado en campañas visuales, e-commerce y publicidad asistida por IA.">
+  <meta property="og:image" content="public/images/projects/cyber-monday.svg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="public/favicon/favicon.svg">
+
+  <!-- Typography: Cinzel, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#mainContent" class="skip-link" data-i18n="skip_link">Saltar al contenido principal</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-link" aria-label="AURA Creative Studio Home">
+        <svg class="brand-mark" viewBox="0 0 64 64" width="32" height="32" aria-hidden="true">
+          <circle cx="32" cy="32" r="28" fill="#22221F"/>
+          <circle cx="32" cy="32" r="16" fill="none" stroke="#C7F36B" stroke-width="3" stroke-dasharray="60 30"/>
+          <circle cx="32" cy="32" r="5" fill="#F7F6F2"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">AURA</span>
+          <span class="brand-tag" data-i18n="brand_sub">Creative Studio &amp; AI</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop" aria-label="Navegación principal">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active" data-i18n="nav_home">Inicio</a></li>
+          <li><a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">Portfolio</a></li>
+          <li><a href="#studio" class="nav-link" data-i18n="nav_studio">Estudio</a></li>
+          <li><a href="#services" class="nav-link" data-i18n="nav_services">Servicios</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contacto</a></li>
+        </ul>
+
+        <!-- Language Switcher -->
+        <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+          <button type="button" class="lang-btn active" data-set-lang="es" aria-pressed="true">ES</button>
+          <button type="button" class="lang-btn" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </nav>
+
+      <!-- Mobile Actions -->
+      <div class="header-actions">
+        <div class="lang-switcher" style="display: none;" id="mobileLangSwitcher" role="group" aria-label="Selector de idioma móvil">
+          <button type="button" class="lang-btn active" data-set-lang="es">ES</button>
+          <button type="button" class="lang-btn" data-set-lang="en">EN</button>
+        </div>
+        <button type="button" class="mobile-menu-toggle" id="mobileMenuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Abrir menú de navegación">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="8" x2="20" y2="8"></line>
+            <line x1="4" y1="16" x2="20" y2="16"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
+    <ul class="mobile-nav-links">
+      <li><a href="#hero" class="mobile-nav-link" data-i18n="nav_home">Inicio</a></li>
+      <li><a href="#portfolio" class="mobile-nav-link" data-i18n="nav_portfolio">Portfolio</a></li>
+      <li><a href="#studio" class="mobile-nav-link" data-i18n="nav_studio">Estudio</a></li>
+      <li><a href="#services" class="mobile-nav-link" data-i18n="nav_services">Servicios</a></li>
+      <li><a href="#contact" class="mobile-nav-link" data-i18n="nav_contact">Contacto</a></li>
+    </ul>
+    <div style="padding-top: 2rem; border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-text-secondary);">IDIOMA / LANGUAGE:</span>
+      <div class="lang-switcher" role="group">
+        <button type="button" class="lang-btn active" data-set-lang="es">ES</button>
+        <button type="button" class="lang-btn" data-set-lang="en">EN</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="mainContent">
+
+    <!-- HERO SECTION -->
+    <section class="section hero" id="hero">
+      <div class="container">
+        <div class="hero-editorial-badge">
+          <span class="badge-pulse"></span>
+          <span data-i18n="hero_badge">Estudio de Dirección Creativa &amp; IA</span>
+        </div>
+
+        <h1 class="hero-headline" data-i18n="hero_title">
+          Diseño editorial y conceptos visuales impulsados por <em>inteligencia artificial</em>.
+        </h1>
+
+        <p class="hero-subhead" data-i18n="hero_desc">
+          AURA es un estudio creativo independiente que fusiona la dirección de arte contemporánea con flujos generativos avanzados para marcas de producto, moda y tecnología.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#portfolio" class="btn btn-primary" data-i18n="hero_cta_projects">Explorar Portfolio</a>
+          <a href="#contact" class="btn btn-secondary" data-i18n="hero_cta_contact">Iniciar Conversación</a>
+        </div>
+
+        <!-- Editorial Statement Grid -->
+        <div class="statement-grid">
+          <div class="statement-col">
+            <span class="statement-label" data-i18n="stat_col1_label">Enfoque</span>
+            <p class="statement-val" data-i18n="stat_col1_val">Dirección de arte artesanal potenciada con pipelines generativos</p>
+          </div>
+          <div class="statement-col">
+            <span class="statement-label" data-i18n="stat_col2_label">Especialidad</span>
+            <p class="statement-val" data-i18n="stat_col2_val">Campañas de producto, e-commerce y visuales multiformato</p>
+          </div>
+          <div class="statement-col">
+            <span class="statement-label" data-i18n="stat_col3_label">Compromiso</span>
+            <p class="statement-val" data-i18n="stat_col3_val">Transparencia editorial y conceptos técnicos verificables</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section class="section section-bordered" id="portfolio">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-meta">
+            <span class="section-meta-num">01</span>
+            <span data-i18n="portfolio_meta">Archivo de Proyectos Seleccionados</span>
+          </div>
+          <h2 class="section-title" data-i18n="portfolio_title">Campañas &amp; Casos de Estudio</h2>
+          <p class="section-desc" data-i18n="portfolio_desc">Una selección de conceptos publicitarios y piezas de arte generativo desarrolladas bajo una rigurosa dirección de arte.</p>
+        </header>
+
+        <!-- Filters -->
+        <div class="portfolio-controls">
+          <div class="filter-group" role="tablist" aria-label="Filtrar por categoría">
+            <button type="button" class="filter-btn active" data-filter="all" data-i18n="filter_all">Todos</button>
+            <button type="button" class="filter-btn" data-filter="product" data-i18n="filter_product">Producto</button>
+            <button type="button" class="filter-btn" data-filter="editorial" data-i18n="filter_editorial">Editorial</button>
+            <button type="button" class="filter-btn" data-filter="industrial" data-i18n="filter_industrial">Diseño &amp; Forma</button>
+            <button type="button" class="filter-btn" data-filter="social" data-i18n="filter_social">Publicidad &amp; Social</button>
+          </div>
+          <span class="project-count" id="projectCount">[ 4 PROYECTOS ]</span>
+        </div>
+
+        <!-- Dynamic Projects Grid -->
+        <div class="projects-grid" id="projectsGrid">
+          <!-- Rendered dynamically by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDIO SECTION -->
+    <section class="section section-bordered" id="studio">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-meta">
+            <span class="section-meta-num">02</span>
+            <span data-i18n="studio_meta">Manifiesto &amp; Visión</span>
+          </div>
+          <h2 class="section-title" data-i18n="studio_title">La inteligencia artificial como pincel, la dirección de arte como guía.</h2>
+        </header>
+
+        <div class="studio-layout">
+          <div class="studio-copy">
+            <p data-i18n="studio_p1">
+              En <strong>AURA Creative Studio</strong> no creemos en la generación masiva e indiscriminada de imágenes. Creemos en la <strong>curaduría meticulosa</strong>, en el balance de los espacios en blanco y en el dominio exhaustivo de las herramientas sintéticas modernas.
+            </p>
+            <p data-i18n="studio_p2">
+              Nuestro proceso integra modelos de difusión de última generación (Midjourney, ComfyUI, ControlNet) con técnicas clásicas de diseño gráfico editorial, calibración cromática y composición tipográfica.
+            </p>
+            <div style="margin-top: 1.5rem;">
+              <a href="#services" class="btn btn-secondary" data-i18n="nav_services">Explorar Servicios</a>
+            </div>
+          </div>
+
+          <div class="studio-ethos-cards">
+            <article class="ethos-card">
+              <div class="ethos-card-num" data-i18n="studio_card1_num">01 / PRECISIÓN</div>
+              <h3 class="ethos-card-title" data-i18n="studio_card1_title">Control Absoluto del Layout</h3>
+              <p class="ethos-card-desc" data-i18n="studio_card1_desc">Usamos esquemas de profundidad y mapas estructurales para garantizar que la IA respete la geometría de producto y las zonas seguras de marca.</p>
+            </article>
+
+            <article class="ethos-card">
+              <div class="ethos-card-num" data-i18n="studio_card2_num">02 / TRANSPARENCIA</div>
+              <h3 class="ethos-card-title" data-i18n="studio_card2_title">Ética &amp; Honestidad Conceptual</h3>
+              <p class="ethos-card-desc" data-i18n="studio_card2_desc">Distinguimos con claridad qué es un concepto de exploración y qué es un activo final, sin inventar resultados comerciales ni datos engañosos.</p>
+            </article>
+
+            <article class="ethos-card">
+              <div class="ethos-card-num" data-i18n="studio_card3_num">03 / EFICIENCIA</div>
+              <h3 class="ethos-card-title" data-i18n="studio_card3_title">Velocidad sin Perder Oficio</h3>
+              <p class="ethos-card-desc" data-i18n="studio_card3_desc">Reducimos semanas de producción fotográfica a días de exploración ágil, manteniendo una calidad visual digna de publicaciones impresas.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section section-bordered" id="services">
+      <div class="container">
+        <header class="section-header">
+          <div class="section-meta">
+            <span class="section-meta-num">03</span>
+            <span data-i18n="services_meta">Áreas de Práctica</span>
+          </div>
+          <h2 class="section-title" data-i18n="services_title">Servicios Creativos de Vanguardia</h2>
+          <p class="section-desc" data-i18n="services_desc">Diseñamos soluciones visuales a medida para marcas que buscan destacar con una narrativa visual contemporánea.</p>
+        </header>
+
+        <div class="services-grid">
+          <!-- Srv 1 -->
+          <article class="service-card">
+            <div>
+              <div class="service-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="service-title" data-i18n="srv1_title">Campañas Publicitarias</h3>
+              <p class="service-desc" data-i18n="srv1_desc">Dirección de arte integral y conceptos visuales para lanzamientos de temporada, vía pública y activaciones digitales.</p>
+            </div>
+            <ul class="service-pills">
+              <li class="service-pill">OOH 3D</li>
+              <li class="service-pill">Key Visuals</li>
+              <li class="service-pill">Lookbooks</li>
+            </ul>
+          </article>
+
+          <!-- Srv 2 -->
+          <article class="service-card">
+            <div>
+              <div class="service-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+              </div>
+              <h3 class="service-title" data-i18n="srv2_title">Anuncios E-Commerce</h3>
+              <p class="service-desc" data-i18n="srv2_desc">Bodegones sintéticos de alta fidelidad, fichas de producto aspiracionales y assets optimizados para conversión.</p>
+            </div>
+            <ul class="service-pills">
+              <li class="service-pill">PDP Assets</li>
+              <li class="service-pill">Still Life</li>
+              <li class="service-pill">Storefront Hero</li>
+            </ul>
+          </article>
+
+          <!-- Srv 3 -->
+          <article class="service-card">
+            <div>
+              <div class="service-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <h3 class="service-title" data-i18n="srv3_title">Social Creative Toolkit</h3>
+              <p class="service-desc" data-i18n="srv3_desc">Sistemas modulares multiformato (9:16, 4:5, 1:1) diseñados para campañas de rendimiento y presencia en redes.</p>
+            </div>
+            <ul class="service-pills">
+              <li class="service-pill">9:16 Reels</li>
+              <li class="service-pill">Feed 4:5</li>
+              <li class="service-pill">Motion Loops</li>
+            </ul>
+          </article>
+
+          <!-- Srv 4 -->
+          <article class="service-card">
+            <div>
+              <div class="service-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <h3 class="service-title" data-i18n="srv4_title">Conceptos Visuales con IA</h3>
+              <p class="service-desc" data-i18n="srv4_desc">Exploración de empaques, visualización de materiales imposibles y renderizado rápido de ideas de producto preliminares.</p>
+            </div>
+            <ul class="service-pills">
+              <li class="service-pill">CGI Synthetic</li>
+              <li class="service-pill">Packaging</li>
+              <li class="service-pill">Material Studies</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-wrapper">
+          <span class="contact-eyebrow" data-i18n="contact_eyebrow">Conexión Directa</span>
+          <h2 class="contact-title" data-i18n="contact_title">¿Tenés un proyecto o campaña en mente?</h2>
+          <p class="contact-desc" data-i18n="contact_desc">
+            Hablemos sobre cómo la dirección de arte con inteligencia artificial puede elevar la presencia visual de tu marca.
+          </p>
+
+          <div class="contact-actions">
+            <!-- Email button clearly configured with pending safety notice -->
+            <a href="mailto:pending-setup@aura-creative.studio" class="btn btn-accent" data-contact-btn data-i18n="contact_btn_email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              Enviar un Correo
+            </a>
+          </div>
+
+          <div class="contact-notice" id="contactPendingNotice">
+            <span class="notice-icon">●</span>
+            <span data-i18n="contact_pending_badge">Configuración de contacto: Email profesional pendiente de confirmación por el titular.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Case Study Interactive Modal -->
+  <div class="modal-overlay" id="caseStudyModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" aria-label="Cerrar modal" data-i18n-attr="aria-label:modal_close_aria">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="modal-body" id="modalDynamicContent">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-name">AURA CREATIVE STUDIO</div>
+          <p data-i18n="footer_tagline">Estudio independiente de diseño editorial, dirección creativa y publicidad sintética.</p>
+        </div>
+
+        <div class="footer-nav-group">
+          <div class="footer-col">
+            <span class="footer-col-title" data-i18n="footer_col_nav">Navegación</span>
+            <ul class="footer-col-links">
+              <li><a href="#hero" data-i18n="nav_home">Inicio</a></li>
+              <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+              <li><a href="#studio" data-i18n="nav_studio">Estudio</a></li>
+              <li><a href="#services" data-i18n="nav_services">Servicios</a></li>
+              <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <span class="footer-col-title" data-i18n="footer_col_legal">Transparencia</span>
+            <p style="font-size: 0.825rem; color: var(--color-text-secondary); max-width: 260px;" data-i18n="footer_legal_spec">
+              Todos los proyectos exhibidos en esta edición inicial son conceptos artísticos ficticios (speculative design).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer_legal_copy">© 2026 AURA Creative Studio. Todos los derechos reservados.</p>
+        <a href="#hero" class="nav-link" data-i18n="footer_back_to_top">Volver arriba ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

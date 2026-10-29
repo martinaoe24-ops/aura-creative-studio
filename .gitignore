@@ -1,0 +1,33 @@
+# Archivos de entorno y credenciales (Seguridad estricta)
+.env
+.env.local
+.env.*.local
+*.env
+*.pem
+*.key
+*.cert
+secrets/
+credentials.json
+
+# Dependencias y caches
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+
+# Herramientas de despliegue y temporales de Vercel
+.vercel
+.vercel/
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.bak
+*.swp
+*~
+.idea/
+.vscode/
